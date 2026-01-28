@@ -3,58 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HI-BOX | Logística Modular</title>
+    <title>HI-BOX | CONTROL PANEL</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com');
+        body { font-family: 'Space Mono', monospace; }
+        .neon-border { box-shadow: 0 0 15px rgba(250,204,21,0.2); }
+    </style>
 </head>
-<body class="bg-black text-white antialiased font-sans">
-    <!-- Nav: Estatus de disponibilidad -->
-    <nav class="p-6 border-b border-zinc-900 flex justify-between items-center max-w-5xl mx-auto">
-        <h1 class="text-2xl font-black tracking-tighter italic">HI-<span class="text-yellow-400 not-italic">BOX</span></h1>
-        <div class="flex items-center gap-2 text-[10px] font-bold text-green-400 border border-green-500/30 px-3 py-1 rounded-full uppercase tracking-widest">
-            <span class="relative flex h-2 w-2">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-            </span>
-            Módulos Disponibles
+<body class="bg-black text-zinc-300 antialiased selection:bg-yellow-400 selection:text-black">
+
+    <!-- Header: Status Sistema -->
+    <nav class="p-6 border-b border-zinc-800 flex justify-between items-center max-w-6xl mx-auto">
+        <div class="flex flex-col">
+            <h1 class="text-2xl font-black tracking-tighter text-white">HI-BOX <span class="text-yellow-400 text-xs tracking-[0.3em] font-light">SYSTEM v1.0</span></h1>
+        </div>
+        <div class="hidden md:block text-[10px] border border-zinc-800 p-2 rounded">
+            <span class="text-green-500">● ONLINE</span> | 2026 LOGISTICS PROTOCOL
         </div>
     </nav>
 
-    <main class="max-w-4xl mx-auto px-6 py-16 text-center">
-        <!-- Hero: El valor diferencial -->
-        <h2 class="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter leading-[0.9]">Lo cargás vos.<br><span class="text-yellow-400 italic font-light">Lo llevamos nosotros.</span></h2>
-        <p class="text-zinc-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto">Mini-mudanzas y storage en módulos de 1.30 x 2.40m. Sin estrés, sin apuro, precio cerrado.</p>
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <!-- Hero: La Misión -->
+        <header class="mb-16">
+            <h2 class="text-4xl md:text-6xl font-black text-white leading-none uppercase mb-4">Módulos de Carga <br><span class="text-yellow-400">Autogestionados.</span></h2>
+            <p class="text-zinc-500 max-w-xl">1.30 x 2.40 x 2.50m. Lo dejamos en tu puerta. Cargás. Lo movemos. Así de simple.</p>
+        </header>
 
-        <!-- Selección Simple: A o B -->
-        <div class="grid md:grid-cols-2 gap-6 mb-12">
-            <!-- Opción A: Mudanza -->
-            <div class="p-8 border border-zinc-800 rounded-3xl bg-zinc-950 hover:border-yellow-400/50 transition-all text-left">
-                <span class="text-yellow-400 font-bold text-xs uppercase tracking-widest">Opción A</span>
-                <h3 class="text-2xl font-bold mt-2 mb-4">Punto a Punto</h3>
-                <p class="text-zinc-500 text-sm mb-6">Te dejamos el Hi-Box, lo cargás, y lo llevamos a tu nuevo destino el mismo día.</p>
-                <p class="text-3xl font-black">$75 <span class="text-xs text-zinc-600 font-normal line-through">$150</span></p>
+        <!-- UI de Selección: Las 3 Opciones -->
+        <div class="grid md:grid-cols-3 gap-4 mb-8">
+            <!-- Opción 1: 4 HORAS -->
+            <div class="border border-zinc-800 bg-zinc-950 p-6 rounded-sm hover:border-yellow-400 transition-all group">
+                <p class="text-[10px] text-zinc-500 mb-2 tracking-widest uppercase text-yellow-400">Modo: Express</p>
+                <h3 class="text-3xl font-black text-white mb-4 italic">4 HORAS</h3>
+                <div class="mb-6">
+                    <span class="text-4xl font-black text-white">$XX.XXX</span>
+                    <p class="text-[10px] text-zinc-600 mt-1">+ EXCEDENTE X HORA: $X.XXX</p>
+                </div>
+                <button class="w-full bg-zinc-900 border border-zinc-700 text-white py-3 text-xs font-bold uppercase group-hover:bg-yellow-400 group-hover:text-black transition-all">Seleccionar</button>
             </div>
 
-            <!-- Opción B: Storage -->
-            <div class="p-8 border border-zinc-800 rounded-3xl bg-zinc-950 hover:border-yellow-400/50 transition-all text-left">
-                <span class="text-yellow-400 font-bold text-xs uppercase tracking-widest">Opción B</span>
-                <h3 class="text-2xl font-bold mt-2 mb-4">Guarda Temporal</h3>
-                <p class="text-zinc-500 text-sm mb-6">Cargás el módulo y lo custodiamos en nuestra base el tiempo que necesites.</p>
-                <p class="text-3xl font-black">$45 <span class="text-xs text-zinc-600 font-normal italic">/semana</span></p>
+            <!-- Opción 2: DIA COMPLETO -->
+            <div class="border-2 border-yellow-400 bg-zinc-950 p-6 rounded-sm relative neon-border">
+                <div class="absolute -top-3 right-4 bg-yellow-400 text-black text-[10px] px-2 font-bold uppercase">Popular</div>
+                <p class="text-[10px] text-yellow-400 mb-2 tracking-widest uppercase">Modo: Full Day</p>
+                <h3 class="text-3xl font-black text-white mb-4 italic text-yellow-400 underline">8 HORAS</h3>
+                <div class="mb-6">
+                    <span class="text-4xl font-black text-white">$XX.XXX</span>
+                    <p class="text-[10px] text-zinc-400 mt-1">IDEAL MUDANZAS COMPLETAS</p>
+                </div>
+                <button class="w-full bg-yellow-400 text-black py-3 text-xs font-bold uppercase hover:bg-white transition-all">Reservar ahora</button>
+            </div>
+
+            <!-- Opción 3: STORAGE -->
+            <div class="border border-zinc-800 bg-zinc-950 p-6 rounded-sm hover:border-yellow-400 transition-all group">
+                <p class="text-[10px] text-zinc-500 mb-2 tracking-widest uppercase text-yellow-400">Modo: Custodia</p>
+                <h3 class="text-3xl font-black text-white mb-4 italic">MENSUAL</h3>
+                <div class="mb-6">
+                    <span class="text-4xl font-black text-white">$XX.XXX</span>
+                    <p class="text-[10px] text-zinc-600 mt-1">STORAGE EN BASE HI-BOX</p>
+                </div>
+                <button class="w-full bg-zinc-900 border border-zinc-700 text-white py-3 text-xs font-bold uppercase group-hover:bg-yellow-400 group-hover:text-black transition-all">Consultar</button>
             </div>
         </div>
 
-        <!-- CTA Principal: El Calendario (Próximo paso) -->
-        <div class="max-w-md mx-auto">
-            <a href="https://wa.me! Quiero ver disponibilidad de un Hi-Box" class="group block w-full bg-yellow-400 text-black py-6 font-black rounded-2xl uppercase text-lg hover:bg-white transition-all shadow-[0_0_30px_rgba(250,204,21,0.3)]">
-                📅 Ver Disponibilidad
-            </a>
-            <p class="mt-4 text-zinc-600 text-[10px] uppercase tracking-[0.3em]">Reserva online en menos de 2 minutos</p>
+        <!-- Secciones Futuras & Empresas -->
+        <div class="grid md:grid-cols-2 gap-4 mb-20">
+            <div class="border border-dashed border-zinc-800 p-8 text-center rounded">
+                <p class="text-zinc-600 text-xs uppercase tracking-widest mb-2 font-bold">Protocolo Disrupt</p>
+                <span class="text-zinc-700 font-black text-2xl uppercase">Próximamente 24/7</span>
+            </div>
+            <div class="border border-zinc-800 bg-zinc-900/30 p-8 text-center rounded flex flex-col justify-center items-center">
+                <p class="text-zinc-400 text-xs mb-4 uppercase tracking-widest font-bold">¿Eres una empresa?</p>
+                <a href="#" class="text-white border-b-2 border-yellow-400 pb-1 text-sm font-bold hover:text-yellow-400 transition-all">PLANES CORPORATIVOS -></a>
+            </div>
         </div>
     </main>
 
-    <!-- Footer: Soporte Humano -->
-    <footer class="text-center pb-20">
-        <a href="tel:TU_TELEFONO" class="text-zinc-500 hover:text-white text-xs border-b border-zinc-800 pb-1 italic">¿Dudas? Hablá con un humano ahora.</a>
-    </footer>
+    <!-- Barra Inferior Global -->
+    <div class="fixed bottom-0 left-0 w-full bg-yellow-400 p-3 text-black overflow-hidden whitespace-nowrap">
+        <div class="inline-block animate-marquee font-bold text-xs uppercase tracking-tighter">
+            50% OFF LANZAMIENTO APLICADO — CÓDIGO: FIRSTBOX — ÚLTIMOS MÓDULOS DISPONIBLES — 2026 TECH LOGISTICS — 
+        </div>
+    </div>
+
+    <style>
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+    </style>
 </body>
 </html>
