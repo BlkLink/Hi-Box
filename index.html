@@ -3,114 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HI-BOX | 2026 LOGISTICS</title>
+    <title>HI-BOX | CONTROL PANEL</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com');
-        body { font-family: 'Inter', sans-serif; }
-        .mono { font-family: 'JetBrains Mono', monospace; }
-        .glow { box-shadow: 0 0 20px rgba(251, 191, 36, 0.2); }
+        body { font-family: 'Space Mono', monospace; }
+        .lcd-glow { text-shadow: 0 0 10px rgba(74, 222, 128, 0.5); }
     </style>
 </head>
-<body class="bg-[#0a0a0a] text-zinc-400 antialiased selection:bg-yellow-400 selection:text-black">
-
-    <!-- Status Bar -->
-    <div class="w-full bg-zinc-900/50 border-b border-zinc-800 px-6 py-2 flex justify-between items-center text-[10px] mono tracking-widest uppercase">
-        <div class="flex items-center gap-2">
-            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-            SISTEMA OPERATIVO v1.0
+<body class="bg-[#050505] text-white antialiased border-4 border-zinc-900 min-h-screen">
+    
+    <!-- HEADER CONSOLA -->
+    <nav class="p-4 border-b-2 border-zinc-800 flex justify-between items-center bg-zinc-950">
+        <div class="flex flex-col">
+            <h1 class="text-xl font-bold tracking-tighter italic leading-none">HI-BOX <span class="text-yellow-400">V.1.0</span></h1>
+            <span class="text-[8px] text-zinc-500 uppercase tracking-[0.3em]">Logistics Command Center</span>
         </div>
-        <div class="text-zinc-600 hidden md:block">ESTATUS: LISTO PARA DESPLIEGUE</div>
-    </div>
-
-    <main class="max-w-4xl mx-auto px-6 py-12 md:py-24">
-        <!-- Logo Disruptivo -->
-        <h1 class="text-4xl md:text-6xl font-black text-white italic mb-12 tracking-tighter">
-            HI-<span class="text-yellow-400 not-italic">BOX</span>
-        </h1>
-
-        <!-- Propuesta: Jobs Style -->
-        <section class="mb-20">
-            <h2 class="text-5xl md:text-8xl font-black text-white leading-[0.85] uppercase mb-6 tracking-tighter">
-                TU ESPACIO.<br><span class="text-yellow-400">DONDE QUIERAS.</span>
-            </h2>
-            <p class="text-xl md:text-2xl text-zinc-500 max-w-xl font-light leading-snug">
-                Te dejamos el módulo. Lo cargás. Lo movemos. <br>
-                <span class="text-zinc-300 font-medium">Logística low-cost sin fricción.</span>
-            </p>
-        </section>
-
-        <!-- Selección de Servicio: A / B -->
-        <div class="grid md:grid-cols-2 gap-4 mb-12">
-            <!-- Opción A -->
-            <button class="group relative border-2 border-zinc-800 bg-zinc-950 p-8 rounded-3xl text-left hover:border-yellow-400 transition-all glow overflow-hidden">
-                <span class="mono text-[10px] text-yellow-400 uppercase tracking-widest mb-4 block">Opción A</span>
-                <h3 class="text-3xl font-black text-white mb-2">4 HORAS</h3>
-                <p class="text-sm text-zinc-500 mb-6">Mudanza exprés o flete puntual.</p>
-                <div class="flex items-baseline gap-2">
-                    <span class="text-4xl font-black text-white">$75</span>
-                    <span class="text-xs text-zinc-600 line-through font-bold">$150</span>
-                </div>
-                <div class="absolute bottom-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span class="text-yellow-400">→</span>
-                </div>
-            </button>
-
-            <!-- Opción B -->
-            <button class="group relative border-2 border-zinc-800 bg-zinc-950 p-8 rounded-3xl text-left hover:border-yellow-400 transition-all glow overflow-hidden">
-                <span class="mono text-[10px] text-yellow-400 uppercase tracking-widest mb-4 block">Opción B</span>
-                <h3 class="text-3xl font-black text-white mb-2">FULL DAY</h3>
-                <p class="text-sm text-zinc-500 mb-6">8 horas para cargar con calma.</p>
-                <div class="flex items-baseline gap-2">
-                    <span class="text-4xl font-black text-white">$120</span>
-                    <span class="text-xs text-zinc-600 line-through font-bold">$240</span>
-                </div>
-                <div class="absolute bottom-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span class="text-yellow-400">→</span>
-                </div>
-            </button>
+        <div class="text-right">
+            <div class="text-[10px] text-green-400 lcd-glow font-bold uppercase animate-pulse">● System Online</div>
+            <div class="text-[8px] text-zinc-600 uppercase">24/7 Service Enabled</div>
         </div>
+    </nav>
 
-        <!-- CTA Principal -->
-        <div class="text-center">
-            <a href="https://wa.me" class="inline-block w-full bg-yellow-400 text-black py-6 rounded-full text-xl font-black uppercase tracking-tighter hover:bg-white transition-all active:scale-95 shadow-xl shadow-yellow-400/10">
-                [ RESERVAR MÓDULO ]
-            </a>
-            <p class="mt-6 mono text-[10px] uppercase tracking-[0.4em] text-zinc-600">
-                Reserva procesada en <span class="text-zinc-400">120 segundos</span>
-            </p>
-        </div>
-
-        <!-- Sección "Coming Soon" Corporativo -->
-        <div class="mt-32 pt-12 border-t border-zinc-900 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <span class="bg-zinc-800 text-zinc-400 text-[10px] px-2 py-1 rounded mono uppercase">Fase 2: Disrupt</span>
-                <h4 class="text-2xl font-black text-white mt-4 italic uppercase">Servicio Nocturno</h4>
-                <p class="text-sm text-zinc-500 mt-2 italic">Menos tráfico, más ahorro. Solo para empresas.</p>
+    <main class="max-w-5xl mx-auto px-4 py-8">
+        
+        <!-- STATUS PANEL -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div class="p-3 border border-zinc-800 bg-zinc-900/50 rounded flex flex-col justify-center items-center">
+                <span class="text-[8px] text-zinc-500 mb-1">UNIDADES</span>
+                <span class="text-xl font-bold">03/09</span>
             </div>
-            <a href="mailto:hola@hi-box.com" class="border border-zinc-800 p-6 rounded-2xl text-center hover:bg-zinc-900 transition-all">
-                <span class="text-xs font-bold text-zinc-400 uppercase">¿Sos empresa? Hablamos →</span>
+            <div class="p-3 border border-zinc-800 bg-zinc-900/50 rounded flex flex-col justify-center items-center">
+                <span class="text-[8px] text-zinc-500 mb-1">PROMO</span>
+                <span class="text-xl font-bold text-yellow-400">-50%</span>
+            </div>
+            <div class="p-3 border border-zinc-800 bg-zinc-900/50 rounded flex flex-col justify-center items-center">
+                <span class="text-[8px] text-zinc-500 mb-1">MODO</span>
+                <span class="text-xl font-bold">BETA</span>
+            </div>
+            <div class="p-3 border border-zinc-800 bg-zinc-900/50 rounded flex flex-col justify-center items-center">
+                <span class="text-[8px] text-zinc-500 mb-1">ZONA</span>
+                <span class="text-xl font-bold text-green-400">ACTIVA</span>
+            </div>
+        </div>
+
+        <h2 class="text-3xl md:text-5xl font-black mb-8 uppercase text-center tracking-tighter italic">Seleccione <span class="text-yellow-400">Servicio</span></h2>
+
+        <!-- OPCIONES DE ALQUILER (EL EMBUDO) -->
+        <div class="grid md:grid-cols-3 gap-4 mb-10">
+            
+            <!-- 4 HORAS -->
+            <button class="group p-6 border-2 border-zinc-800 bg-zinc-950 hover:border-yellow-400 transition-all text-left relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-2 text-[10px] bg-zinc-800 group-hover:bg-yellow-400 group-hover:text-black transition-colors">OP-01</div>
+                <h3 class="text-xl font-bold mb-1">MEDIO DÍA</h3>
+                <p class="text-zinc-500 text-[10px] mb-4 uppercase">Servicio Base 4hs</p>
+                <div class="text-3xl font-black mb-2">$45 <span class="text-[10px] line-through text-zinc-700 font-normal">$90</span></div>
+                <p class="text-[9px] text-zinc-600 italic">+ $X cada hora excedente</p>
+            </button>
+
+            <!-- 8 HORAS -->
+            <button class="group p-6 border-2 border-yellow-400 bg-zinc-950 hover:bg-yellow-400/5 transition-all text-left relative">
+                <div class="absolute top-0 right-0 p-2 text-[10px] bg-yellow-400 text-black font-bold">OP-02 (HOT)</div>
+                <h3 class="text-xl font-bold mb-1 italic">DÍA COMPLETO</h3>
+                <p class="text-zinc-500 text-[10px] mb-4 uppercase text-yellow-400/80">Servicio 8hs</p>
+                <div class="text-3xl font-black mb-2">$75 <span class="text-[10px] line-through text-zinc-700 font-normal">$150</span></div>
+                <p class="text-[9px] text-zinc-600 italic">+ $X cada hora excedente</p>
+            </button>
+
+            <!-- DISRUPT -->
+            <button class="group p-6 border-2 border-zinc-800 bg-zinc-950 opacity-60 text-left relative grayscale">
+                <div class="absolute top-0 right-0 p-2 text-[10px] bg-red-600 text-white font-bold tracking-tighter">PRÓXIMAMENTE</div>
+                <h3 class="text-xl font-bold mb-1">NIGHT SHIFT</h3>
+                <p class="text-zinc-500 text-[10px] mb-4 uppercase">Modo Disrupt 22:00 - 06:00</p>
+                <div class="text-3xl font-black mb-2">$35</div>
+                <p class="text-[9px] text-zinc-600 italic">Solo Empresas & Pre-acordado</p>
+            </button>
+        </div>
+
+        <!-- CTA ACCIÓN FINAL -->
+        <div class="max-w-md mx-auto space-y-4">
+            <a href="https://wa.me" class="block w-full bg-green-500 hover:bg-green-400 text-black py-5 font-black text-center uppercase tracking-tighter text-xl rounded shadow-[0_0_20px_rgba(34,197,94,0.4)]">
+                [ Reservar Ahora ]
+            </a>
+            
+            <a href="tel:TU_NUMERO" class="block w-full border border-zinc-800 hover:text-white text-zinc-500 py-3 text-center text-xs italic uppercase tracking-[0.2em]">
+                > Contacto Humano Directo
             </a>
         </div>
+
+        <!-- EMPRESAS BORDER -->
+        <div class="mt-16 pt-8 border-t border-dashed border-zinc-800 text-center">
+            <button class="text-zinc-500 hover:text-yellow-400 text-[10px] uppercase tracking-widest border border-zinc-800 px-4 py-2 rounded-full">
+                ¿Sos una empresa? Click aquí
+            </button>
+        </div>
+
     </main>
 
-    <!-- Marquee de Oferta -->
-    <footer class="fixed bottom-0 w-full bg-yellow-400 py-2 border-t border-black overflow-hidden">
-        <div class="flex gap-12 animate-marquee mono text-[10px] font-bold text-black uppercase">
-            <span>50% OFF LANZAMIENTO</span> <span>●</span> <span>CÓDIGO: HI-FIRST</span> <span>●</span> <span>MÓDULOS LIMITADOS</span> <span>●</span> <span>MUDANZA SIN ESTRÉS</span> <span>●</span> <span>HI-BOX 2026</span>
-        </div>
+    <footer class="p-6 text-center text-[8px] text-zinc-700 uppercase tracking-[0.5em]">
+        © 2026 Hi-Box Systems - All Rights Reserved
     </footer>
-
-    <style>
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-            display: flex;
-            width: 200%;
-            animation: marquee 15s linear infinite;
-        }
-    </style>
 </body>
 </html>
